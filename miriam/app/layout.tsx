@@ -16,7 +16,7 @@ export default function RootLayout({
       <body className="antialiased bg-[#f8f9ff]">
         <div className="fixed inset-0 border-[30px] border-white pointer-events-none z-10"></div>
 
-        <main className="min-h-screen  bg-[#f8f9ff] relative z-0">
+        <main className="min-h-screen p-10  bg-[#f8f9ff] relative z-0">
           {children}
         </main>
       </body>
