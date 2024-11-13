@@ -1,15 +1,27 @@
 'use client'
 
 import Image from "next/image";
+import { useState, useEffect } from "react";
+
 import ProjectCard from "@/components/ProjectCard";
+import ResizableInput from "@/components/ResizableInput";
 import ContactButton from "@/components/ContactButton";
 import GradientCircle from "@/components/GradientCircle";
-import { BiMessageRounded } from "react-icons/bi";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 
 export default function Home() {
+
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
 
   return (
@@ -18,11 +30,16 @@ export default function Home() {
         <ContactButton />
       </div>
 
-      <div className="w-full md:w-9/12   h-[80vh] pt-[8vw] mx-auto md:flex relative">
+      <div className="w-full md:w-9/12   h-[80vh] pt-[6vw] mx-auto md:flex relative">
         {/* Left content area */}
-        <div className="w-9/12  z-20">
-          <div className="text-[3.8vw]">Hi,</div>
-          <div className="text-[3.8vw] flex gap-4">
+        <div className="w-9/12  z-20 animate-fade-down"
+          style={{ animationDelay: "0.7s" }}
+        >
+          <div
+            className="text-[3.8vw]"
+          >
+            Hi,
+          </div>          <div className="text-[3.8vw] flex gap-4">
             <div>I'm</div>
             <div className="font-bold">Miriam</div>
           </div>
@@ -42,7 +59,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-5/12  relative flex justify-center items-center">
+        <div className="w-5/12  relative flex justify-center items-center"
+          style={{
+            transform: `translateY(${-scrollY * 0.5}px)`, // Parallax effect
+          }}>
           <div
             className="w-[40vw] opacity-30 blur-3xl overflow-hidden  h-[600px] rounded-full top-0 left-[-200px] absolute"
 
@@ -125,13 +145,7 @@ export default function Home() {
         </div>
 
         {/* Message Field */}
-        <div className="mt-6">
-          <label className="block font-semibold mb-2">Message</label>
-          <textarea
-            placeholder="Your Message"
-            className="w-full p-3 rounded-2xl bg-white border border-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500"
-          />
-        </div>
+        <ResizableInput />
 
         {/* Submit Button */}
         <div className="mt-6 text-center">
