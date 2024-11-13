@@ -1,14 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Lexend+Giga:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Gowun+Dodum&family=Hepta+Slab:wght@1..900&family=Lexend+Giga:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&family=Questrial&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Yrsa:ital,wght@0,300..700;1,300..700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  background-color: #f8f9ff; /* The mutd purple color */
+  background-color: hsl(231, 100%, 99%); /* The mutd purple color */
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
-
   font-style: normal; 
 }
 
@@ -21,4 +20,71 @@ body {
 .full-height {
   height: calc(var(--vh, 1vh) * 100);
   min-height: calc(var(--vh, 1vh) * 100);
+}
+
+        
+#gradient-canvas {
+  width:100%;
+  height:100%;
+  --gradient-color-1: #9ffffa; 
+  --gradient-color-2: #e78dec; 
+  --gradient-color-3: #b589fd;  
+  --gradient-color-4: #9499f4;
+}
+      
+
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f5; /* Background color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #bcb6fa; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Round the thumb */
+  border: 2px solid #f0f0f5; /* Optional: add a border around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #8984c2; /* Darken on hover */
+}
+
+
+@keyframes gradientSpin {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.spinningBorder::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  left: -3px;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(270deg, #9ffffa, #dabdfa, #d2c1ec, #c7e3ff);
+  background-size: 400% 400%;
+  animation: gradientSpin 3s ease infinite;
+  transition: opacity 0.3s ease; /* Smooth transition for appearance */
+  z-index: -1;
+  opacity: 0;
+}
+
+
+
+.spinningBorder:hover::before {
+  opacity: 1; /* Makes the gradient border visible on hover */
+  animation: gradientSpin 3s ease infinite; /* Starts the gradient animation */
 }
