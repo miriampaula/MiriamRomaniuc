@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Gowun+Dodum&family=Hepta+Slab:wght@1..900&family=Lexend+Giga:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&family=Questrial&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Yrsa:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Meie+Script&family=Merienda:wght@300..900&family=Parisienne&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,6 +11,21 @@ body {
   font-weight: 500;
   font-style: normal; 
 }
+
+.thin {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal; 
+}
+
+
+.cursive {
+  font-family: "Parisienne", cursive;
+  font-weight: 300;
+  font-style: normal;
+}
+
 
 @layer utilities {
   .text-balance {
@@ -26,11 +42,24 @@ body {
 #gradient-canvas {
   width:100%;
   height:100%;
-  --gradient-color-1: #9ffffa; 
-  --gradient-color-2: #e78dec; 
-  --gradient-color-3: #b589fd;  
-  --gradient-color-4: #9499f4;
+  --gradient-color-4: #d3f4ce; 
+  --gradient-color-2: #71b8eb; 
+  --gradient-color-3: #6a60ff;  
+  --gradient-color-1: #7cc1ed;
+
 }
+        
+#gradient2-canvas {
+  width:100%;
+  height:100%;
+  --gradient2-color-4: #b0dbe4; 
+  --gradient2-color-2: #71b8eb; 
+  --gradient2-color-3: #6a60ff;  
+  --gradient2-color-1: #a1dbff;
+
+}
+      
+
       
 
 ::-webkit-scrollbar {
@@ -68,13 +97,13 @@ body {
 .spinningBorder::before {
   content: '';
   position: absolute;
-  top: -3px;
-  right: -3px;
-  bottom: -3px;
-  left: -3px;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
   border-radius: inherit;
   padding: 2px;
-  background: linear-gradient(270deg, #9ffffa, #dabdfa, #d2c1ec, #c7e3ff);
+  background: linear-gradient(270deg, #d3f4ce, #abd7f7, #908ae8, #abd7f7);
   background-size: 400% 400%;
   animation: gradientSpin 3s ease infinite;
   transition: opacity 0.3s ease; /* Smooth transition for appearance */
@@ -102,5 +131,77 @@ body {
 }
 
 .animate-fade-down {
-  animation: fadeDown 0.6s ease-in-out both;
+  animation: fadeDown 1s ease-in-out both;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.6s ease-in-out both;
+}
+
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 0.4;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out both;
+}
+
+
+/* Continuous rolling animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.keywords-container {
+  display: flex;
+  flex-wrap: nowrap;
+  animation: scroll 30s linear infinite;
+  width: max-content; /* Ensures container takes only the required width */
+}
+
+.relative.overflow-hidden {
+  position: relative;
+  overflow: hidden;
+}
+
+.blur-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    #fafbff 0%,
+    rgba(250, 251, 255, 0) 10%,
+    rgba(250, 251, 255, 0) 90%,
+    #fafbff 100%
+  );
 }

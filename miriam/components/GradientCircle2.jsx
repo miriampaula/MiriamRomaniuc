@@ -3,19 +3,19 @@
 
 import React, { useEffect, useRef } from 'react';
 
-const GradientCircle = React.memo(() => {
+const GradientCircle2 = React.memo(() => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
-    import('../app/Gradient').then(({ Gradient }) => {
+    import('../app/Gradient2').then(({ Gradient2 }) => {
       const canvas = canvasRef.current;
       if (canvas) {
         canvas.width = canvas.offsetWidth / 2; // Reduce resolution by half
         canvas.height = canvas.offsetHeight / 2;
       }
 
-      const gradient = new Gradient();
-      gradient.initGradient('#gradient-canvas');
+      const gradient = new Gradient2();
+      gradient.initGradient('#gradient2-canvas');
 
       return () => {
         gradient.disconnect();
@@ -25,7 +25,7 @@ const GradientCircle = React.memo(() => {
 
   return (
     <canvas
-      id="gradient-canvas"
+      id="gradient2-canvas"
       ref={canvasRef}
       data-transition-in
       className="absolute inset-0 w-full h-full"
@@ -33,4 +33,4 @@ const GradientCircle = React.memo(() => {
   );
 });
 
-export default GradientCircle;
+export default GradientCircle2;
