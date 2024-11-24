@@ -5,6 +5,8 @@ function normalizeColor(hexCode) {
     [t]: n
   }), {});
   
+
+  
   //Essential functionality of WebGl
   //t = width
   //n = height
@@ -270,7 +272,7 @@ function normalizeColor(hexCode) {
   }
   
   //Gradient object
-  class Gradient2 {
+  class Gradient3 {
     constructor(...t) {
         e(this, "el", void 0), e(this, "cssVarRetries", 0), e(this, "maxCssVarRetries", 200), e(this, "angle", 0), e(this, "isLoadedClass", !1), e(this, "isScrolling", !1), /*e(this, "isStatic", o.disableAmbientAnimations()),*/ e(this, "scrollingTimeout", void 0), e(this, "scrollingRefreshDelay", 200), e(this, "isIntersecting", !1), e(this, "shaderFiles", void 0), e(this, "vertexShader", void 0), e(this, "sectionColors", void 0), e(this, "computedCanvasStyle", void 0), e(this, "conf", void 0), e(this, "uniforms", void 0), e(this, "t", 1253106), e(this, "last", 0), e(this, "width", void 0), e(this, "minWidth", 1111), e(this, "height", 600), e(this, "xSegCount", void 0), e(this, "ySegCount", void 0), e(this, "mesh", void 0), e(this, "material", void 0), e(this, "geometry", void 0), e(this, "minigl", void 0), e(this, "scrollObserver", void 0), e(this, "amp", 320), e(this, "seed", 5), e(this, "freqX", 14e-5), e(this, "freqY", 29e-5), e(this, "freqDelta", 1e-5), e(this, "activeColors", [1, 1, 1, 1]), e(this, "isMetaKey", !1), e(this, "isGradientLegendVisible", !1), e(this, "isMouseDown", !1), e(this, "handleScroll", () => {
             clearTimeout(this.scrollingTimeout), this.scrollingTimeout = setTimeout(this.handleScrollEnd, this.scrollingRefreshDelay), this.isGradientLegendVisible && this.hideGradientLegend(), this.conf.playing && (this.isScrolling = !0, this.pause())
@@ -468,7 +470,7 @@ function normalizeColor(hexCode) {
     * Using default colors assigned below if no variables have been found after maxCssVarRetries
     */
     waitForCssVars() {
-        if (this.computedCanvasStyle && -1 !== this.computedCanvasStyle.getPropertyValue("--gradient2-color-1").indexOf("#")) this.init(), this.addIsLoadedClass();
+        if (this.computedCanvasStyle && -1 !== this.computedCanvasStyle.getPropertyValue("--gradient3-color-1").indexOf("#")) this.init(), this.addIsLoadedClass();
         else {
             if (this.cssVarRetries += 1, this.cssVarRetries > this.maxCssVarRetries) {
                 return this.sectionColors = [16711680, 16711680, 16711935, 65280, 255],void this.init();
@@ -480,7 +482,7 @@ function normalizeColor(hexCode) {
     * Initializes the four section colors by retrieving them from css variables.
     */
     initGradientColors() {
-        this.sectionColors = ["--gradient2-color-1", "--gradient2-color-2", "--gradient2-color-3", "--gradient2-color-4"].map(cssPropertyName => {
+        this.sectionColors = ["--gradient3-color-1", "--gradient3-color-2", "--gradient3-color-3", "--gradient3-color-4"].map(cssPropertyName => {
             let hex = this.computedCanvasStyle.getPropertyValue(cssPropertyName).trim();
             //Check if shorthand hex value was used and double the length so the conversion in normalizeColor will work.
             if (4 === hex.length) {
@@ -509,4 +511,4 @@ function normalizeColor(hexCode) {
   * Gradient.updateFrequency(freq)
   */
   
-  export { Gradient2 }
+  export { Gradient3 }

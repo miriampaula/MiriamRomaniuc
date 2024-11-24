@@ -5,6 +5,11 @@ import { HiOutlineTruck } from "react-icons/hi";
 import { BsGlobe } from "react-icons/bs";
 import { FaRegLightbulb } from "react-icons/fa6";
 import GradientCircle2 from '@/components/GradientCircle2';
+import GradientCircle3 from '@/components/GradientCircle3';
+import { RiTailwindCssFill } from "react-icons/ri";
+import { GrReactjs } from "react-icons/gr";
+import { RiNextjsLine } from "react-icons/ri";
+import { TbBrandAzure } from "react-icons/tb";
 import BigButton from "@/components/BigButton";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa6";
@@ -33,25 +38,25 @@ const ProjectPage = async ({ params }) => {
                 {/* Left Side */}
                 <div className="w-1/2 relative">
                     {/* Keywords Section */}
-                    <div className="relative overflow-hidden h-[50px] mt-2 bg-[#fafbff]">
+                    <div className="relative overflow-hidden w-[90%] h-[50px] mt-2 bg-[#fafbff]">
                         {/* Rolling Keywords */}
                         <div className="keywords-container">
                             {keywords.map((keyword, index) => (
                                 <div
                                     key={index}
-                                    className="inline-flex items-center text-[1.2vw] font-bold text-black"
+                                    className="inline-flex items-center text-[1.4vw] thin text-gray-700"
                                 >
-                                    <span className="ml-[4vw] text-[1.5vw]">{keyword.icon}</span>
-                                    <span className="ml-[1vw] font-light">{keyword.word}</span>
+                                    <span className="ml-[4vw] text-[1vw]">{keyword.icon}</span>
+                                    <span className="ml-[1vw] ">{keyword.word}</span>
                                 </div>
                             ))}
                             {keywords.map((keyword, index) => (
                                 <div
                                     key={`duplicate-${index}`}
-                                    className="inline-flex items-center text-[1.2vw] font-bold text-black"
+                                    className="inline-flex items-center text-[1.4vw] thin text-gray-700"
                                 >
-                                    <span className="ml-[4vw] text-[1.5vw]">{keyword.icon}</span>
-                                    <span className="ml-[1vw] font-light">{keyword.word}</span>
+                                    <span className="ml-[4vw] text-[1vw]">{keyword.icon}</span>
+                                    <span className="ml-[1vw] ">{keyword.word}</span>
                                 </div>
                             ))}
                         </div>
@@ -60,10 +65,10 @@ const ProjectPage = async ({ params }) => {
                     </div>
 
                     {/* Image */}
-                    <div className="absolute w-full top-20 right-0">
+                    <div className="absolute w-full top-24 right-0">
                         <Image
                             src={"/imgs/proj1.jpg"}
-                            className="rounded-3xl w-[100%]"
+                            className="rounded-3xl w-[90%]"
                             alt="proj"
                             width={300}
                             height={100}
@@ -78,16 +83,24 @@ const ProjectPage = async ({ params }) => {
                 <div className="w-5/12 relative">
                     <div className="text-[3vw] text-gray-800 text-right relative">
                         ROUTE OPTIMIZER
-                        <div className="text-[5.5vw] cursive text-[#89c0ff] opacity-20 absolute top-[-4vw] left-[-1vw]">
+
+
+                        <div className="text-[5.5vw] cursive text-[#89c0ff] opacity-20 absolute top-[-4vw] left-5">
                             {name}
                         </div>
+
                     </div>
                     <div className="grid mt-[3vw] gap-[4vw]">
                         <div className="ml-auto thin text-[1.2vw] w-10/12 text-right">
-                            An app designed to optimize waste collection by using real-time data and
+                            An app designed to
+                            <span className="font-semibold">{" "}optimize waste collection routes{" "}
+                            </span> by using real-time data and
                             advanced algorithms to cut costs, reduce pollution, and ensure timely
                             pickups. A subscription model enables waste management companies to operate
-                            more efficiently while enhancing service for municipalities and residents.
+                            more efficiently while enhancing service for
+
+                            <span className="font-semibold">            {" "}                municipalities and residents.{" "}
+                            </span>
                         </div>
 
                         <div className="flex justify-between text-[1vw]">
@@ -125,13 +138,18 @@ const ProjectPage = async ({ params }) => {
             </div>
 
 
-            <div className="w-full z-50 mt-[8vw]  ">
+            <div className="w-full relative z-50 mt-[8vw]  ">
+
+                <div className="absolute w-[80vw] border border-black h-[90vh] blur-3xl opacity-40  rounded-full top-1/3 left-[-10vw] pointer-events-none overflow-hidden">
+                    <GradientCircle3 />
+                </div>
+
                 <div className="flex w-11/12 mx-auto gap-[3vw]">
                     <div className="w-8/12 relative z-30 grid gap-[3vw]">
-                        <div className="w-full h-[400px] p-10 bg-white z-30  border border-gray-200   rounded-3xl flex flex-col items-start">
+                        <div className="w-full  p-[5%] bg-white z-30 rounded-3xl flex flex-col items-start">
                             {/* Header */}
                             <div>
-                                <div className="text-[2vw] font-extrabold">When</div>
+                                <div className="text-[2vw] font-extrabold text-black">When</div>
                             </div>
 
                             {/* Inline Content */}
@@ -144,7 +162,7 @@ const ProjectPage = async ({ params }) => {
                             </div>
 
                             {/* Description */}
-                            <div className="text-[1.3vw] mt-[3vw] thin  w-9/12 text-center self-center flex-1 items-center">
+                            <div className="text-[1.2vw] thin  pt-8 w-10/12 text-center self-center flex-1 items-center">
                                 This project is the result of
                                 <span className="text-[#5775fa]  font-semibold"> 3 intense contest days </span>
                                 where we got the challenge to create
@@ -153,15 +171,37 @@ const ProjectPage = async ({ params }) => {
                             </div>
                         </div>
 
-                        <div className="w-full h-[500px] p-10 bg-white  border border-gray-200   rounded-3xl">
-                            <div className="text-[2vw] font-extrabold " >How</div>
+                        <div className="w-full  p-10 bg-white    rounded-3xl">
+                            <div className="text-[2vw] font-extrabold text-black " >How</div>
+                            <div className="text-center  w-10/12  mx-auto pt-[3vw] thin text-[1.2vw]">The interface was built quickly using TailwindCSS, React, and NextJS, focusing on simplicity and usability.
+
+                            </div>
+                            <div className="pt-[1vw] my-[3vw] text-gray-700 fun flex justify-evenly">
+                                <div className="grid content-center text-center gap-3">
+                                    <RiTailwindCssFill className="mx-auto" size={50} />
+                                    TailwindCSS
+                                </div>
+                                <div className="grid content-center text-center gap-3">
+                                    <GrReactjs className="mx-auto" size={50} />
+                                    React
+                                </div>
+                                <div className="grid content-center text-center gap-3">
+                                    <RiNextjsLine className="mx-auto" size={50} />
+                                    NextJS
+                                </div>
+                                <div className="grid content-center text-center gap-3">
+                                    <TbBrandAzure className="mx-auto" size={50} />
+                                    Azure API
+                                </div>
+                            </div>
+                            <div className="w-full text-center font-extrabold mt-8 text-[1vw] text-[#9fd197]">~ Stack Used ~ </div>
 
 
                         </div>
                     </div>
-                    <div className="w-4/12 h-[900px] p-10 bg-white z-30 border border-gray-200 rounded-3xl">
-                        <div className="text-[2vw] font-extrabold">What</div>
-                        <div className="grid my-[2vw] h-full justify-evenly text-center">
+                    <div className="w-4/12  p-10 bg-white z-30 rounded-3xl">
+                        <div className="text-[2vw] font-extrabold text-black">What</div>
+                        <div className="grid my-[2vw] h-full justify-evenly text-center pb-10">
 
                             {/* Frontend Development */}
                             <div>
@@ -171,7 +211,7 @@ const ProjectPage = async ({ params }) => {
                                 </div>
                                 <div className="text-[1vw] thin">
                                     Developed a dynamic and
-                                    <span className="font-extrabold text-[#4785c7]">
+                                    <span className="font-extrabold text-[#88b9ff]">
                                         {" "}responsive user interface,{" "}
                                     </span>
                                     integrating seamless interactions and ensuring performance optimization.
@@ -185,7 +225,7 @@ const ProjectPage = async ({ params }) => {
                                     {" "}  UX/UI Design{" "}
                                 </div>
                                 <div className="text-[1vw] thin">
-                                    Created  <span className="font-extrabold text-[#4785c7]">
+                                    Created  <span className="font-extrabold text-[#88b9ff]">
                                         user-centric designs
                                     </span> with intuitive navigation, aligning the project with modern UI/UX best practices.
                                 </div>
@@ -199,8 +239,8 @@ const ProjectPage = async ({ params }) => {
                                 </div>
                                 <div className="text-[1vw] thin">
                                     Defined the
-                                    <span className="font-extrabold text-[#4785c7]">
-                                    {" "}     visual identity     {" "}                               </span>
+                                    <span className="font-extrabold text-[#88b9ff]">
+                                        {" "}     visual identity     {" "}                               </span>
                                     , including branding elements, and presented the project as a viable product to stakeholders.
                                 </div>
                             </div>
@@ -214,12 +254,10 @@ const ProjectPage = async ({ params }) => {
                                 <div className="text-[1vw] thin">
                                     Crafted a compelling
 
-                                    <span className="font-extrabold text-[#4785c7]">
-                                    {" "}narrative{" "}
+                                    <span className="font-extrabold text-[#88b9ff]">
+                                        {" "}narrative{" "}
                                     </span>
-
                                     highlighting the project's problem-solving capabilities, value proposition, and real-world applications.
-
                                 </div>
                             </div>
 

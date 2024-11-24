@@ -18,7 +18,7 @@ function ExpandingTextarea() {
   };
 
   return (
-    <div className="mt-6">
+    <div className="mt-6 z-30 ">
       <label className="block font-semibold mb-2">Message</label>
       <textarea
         ref={textareaRef}
