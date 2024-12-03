@@ -34,7 +34,7 @@ const ParallaxSection = React.memo(() => {
             <div
                 className="w-5/12 relative flex justify-center items-center"
                 style={{
-                    transform: `translateY(${-scrollY * 0.4}px)`,
+                    transform: `translateY(${-scrollY * 0.3}px)`,
                 }}
             >
                 <div className="w-[40vw] animate-fade-in blur-3xl overflow-hidden h-[600px] rounded-full top-0 left-[-250px] absolute">
@@ -44,7 +44,7 @@ const ParallaxSection = React.memo(() => {
 
             <div
                 style={{
-                    transform: `translateY(${-scrollY * 0.4}px)`,
+                    transform: `translateY(${-scrollY * 0.3}px)`,
                 }}
                 className="absolute top-1/2 left-3/4"
             >

@@ -1,22 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Gowun+Dodum&family=Hepta+Slab:wght@1..900&family=Lexend+Giga:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&family=Questrial&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Yrsa:ital,wght@0,300..700;1,300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DynaPuff:wght@400..700&family=Indie+Flower&family=Meie+Script&family=Merienda:wght@300..900&family=Pacifico&family=Parisienne&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Butterfly+Kids&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DynaPuff:wght@400..700&family=Indie+Flower&family=Meie+Script&family=Merienda:wght@300..900&family=Pacifico&family=Parisienne&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Satisfy&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  background-color: hsl(231, 100%, 99%); /* The mutd purple color */
+  background-color: hsl(231, 100%, 99%);
+  /* The mutd purple color */
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
-  font-style: normal; 
+  font-style: normal;
 }
 
 .thin {
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
-  font-style: normal; 
+  font-style: normal;
 }
 
 
@@ -33,6 +34,13 @@ body {
 
 .fun2 {
   font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.fun3 {
+  font-family: "Satisfy", cursive;
   font-weight: 400;
   font-style: normal;
 }
@@ -55,59 +63,65 @@ body {
   min-height: calc(var(--vh, 1vh) * 100);
 }
 
-        
+
 #gradient-canvas {
-  width:100%;
-  height:100%;
-  --gradient-color-4: #d3f4ce; 
-  --gradient-color-2: #71b8eb; 
-  --gradient-color-3: #6a60ff;  
+  width: 100%;
+  height: 100%;
+  --gradient-color-4: #d3f4ce;
+  --gradient-color-2: #71b8eb;
+  --gradient-color-3: #6a60ff;
   --gradient-color-1: #7cc1ed;
 
 }
-        
+
 #gradient2-canvas {
-  width:100%;
-  height:100%;
-  --gradient2-color-4: #c3f9e7; 
-  --gradient2-color-2: #71b8eb; 
-  --gradient2-color-3: #6a60ff;  
+  width: 100%;
+  height: 100%;
+  --gradient2-color-4: #c3f9e7;
+  --gradient2-color-2: #71b8eb;
+  --gradient2-color-3: #6a60ff;
   --gradient2-color-1: #b8a5ec;
 
 }
-      
 
-        
+
+
 #gradient3-canvas {
-  width:100%;
-  height:100%;
-  --gradient3-color-4: #c3f9e7; 
-  --gradient3-color-2: #71b8eb; 
-  --gradient3-color-3: #6a60ff;  
+  width: 100%;
+  height: 100%;
+  --gradient3-color-4: #c3f9e7;
+  --gradient3-color-2: #71b8eb;
+  --gradient3-color-3: #6a60ff;
   --gradient3-color-1: #b8a5ec;
 
 }
-      
 
 
-      
+
+
 
 ::-webkit-scrollbar {
-  width: 8px; /* Width of the scrollbar */
+  width: 8px;
+  /* Width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-  background: #f0f0f5; /* Background color of the track */
+  background: #f0f0f5;
+  /* Background color of the track */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #bcb6fa; /* Color of the scrollbar thumb */
-  border-radius: 10px; /* Round the thumb */
-  border: 2px solid #f0f0f5; /* Optional: add a border around the thumb */
+  background-color: #bcb6fa;
+  /* Color of the scrollbar thumb */
+  border-radius: 10px;
+  /* Round the thumb */
+  border: 2px solid #f0f0f5;
+  /* Optional: add a border around the thumb */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #8984c2; /* Darken on hover */
+  background-color: #8984c2;
+  /* Darken on hover */
 }
 
 
@@ -115,9 +129,11 @@ body {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -136,7 +152,8 @@ body {
   background: linear-gradient(270deg, #d3f4ce, #abd7f7, #908ae8, #abd7f7);
   background-size: 400% 400%;
   animation: gradientSpin 3s ease infinite;
-  transition: opacity 0.3s ease; /* Smooth transition for appearance */
+  transition: opacity 0.3s ease;
+  /* Smooth transition for appearance */
   z-index: -1;
   opacity: 0;
 }
@@ -144,8 +161,10 @@ body {
 
 
 .spinningBorder:hover::before {
-  opacity: 1; /* Makes the gradient border visible on hover */
-  animation: gradientSpin 3s ease infinite; /* Starts the gradient animation */
+  opacity: 1;
+  /* Makes the gradient border visible on hover */
+  animation: gradientSpin 3s ease infinite;
+  /* Starts the gradient animation */
 }
 
 
@@ -154,6 +173,7 @@ body {
     opacity: 0;
     transform: translateY(-20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -161,7 +181,7 @@ body {
 }
 
 .animate-fade-down {
-  animation: fadeDown 1s ease-in-out both;
+  animation: fadeDown 0.5s ease-in-out both;
 }
 
 @keyframes fadeUp {
@@ -169,14 +189,17 @@ body {
     opacity: 0;
     transform: translateY(50px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
+
+
 .animate-fade-up {
-  animation: fadeUp 0.6s ease-in-out both;
+  animation: fadeUp 0.5s ease-in-out both;
 }
 
 
@@ -186,6 +209,7 @@ body {
     opacity: 0;
     transform: translateY(-20px);
   }
+
   100% {
     opacity: 0.4;
     transform: translateY(0);
@@ -196,12 +220,84 @@ body {
   animation: fadeIn 1s ease-in-out both;
 }
 
+@keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-left {
+  animation: fadeLeft 0.5s ease-in-out both;
+}
+
+
+@keyframes fadeInward {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-inward {
+  animation: fadeInward 1s ease-in-out both;
+}
+
+
+
+/* Base animation styles */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+
+  }
+}
+
+/* Fade-in-down animation */
+.fade-in-down {
+  opacity: 0;
+  animation: fadeInDown 0.4s ease-in-out forwards;
+}
+
+/* Fade-in-left animation */
+.fade-in-left {
+  opacity: 0;
+  animation: fadeInLeft 0.4s ease-in-out forwards;
+}
+
 
 /* Continuous rolling animation */
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -210,8 +306,8 @@ body {
 .keywords-container {
   display: flex;
   flex-wrap: nowrap;
-  animation: scroll 30s linear infinite;
-  width: max-content; /* Ensures container takes only the required width */
+  animation: scroll 10s linear infinite;
+  width: max-content;
 }
 
 .relative.overflow-hidden {
@@ -227,11 +323,30 @@ body {
   right: 0;
   pointer-events: none;
   z-index: 1;
-  background: linear-gradient(
-    to right,
-    #fafbff 0%,
-    rgba(250, 251, 255, 0) 10%,
-    rgba(250, 251, 255, 0) 90%,
-    #fafbff 100%
-  );
+  background: linear-gradient(to right,
+      #fafbff 0%,
+      rgba(250, 251, 255, 0) 10%,
+      rgba(250, 251, 255, 0) 90%,
+      #fafbff 100%);
 }
+
+
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-fade-out {
+  animation: fadeOut 0.3s ease-in-out both;
+}
+
+.parent-container {
+  opacity: 1; /* Ensure visible by default */
+  transition: opacity 0.3s ease-in-out;
+}
+
