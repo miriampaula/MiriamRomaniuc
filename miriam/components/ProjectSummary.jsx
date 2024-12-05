@@ -37,8 +37,8 @@ const ProjectSummary = ({ name }) => {
                 </div>
 
                 {visible && (
-                    <div className="delay-300">                    <Details />
-
+                    <div className="delay-500">
+                        <Details />
                     </div>
                 )}
 

@@ -35,9 +35,8 @@ const ProjectsSection = () => {
         {/* Text Above the ProjectCards */}
         <div
           ref={textRef}
-          className={`grid other-elements gap-4 text-center transition-all duration-1000 ease-in-out ${
-            textInView ? "animate-fade-inward opacity-100" : "opacity-0"
-          }`}
+          className={`grid other-elements gap-4 text-center transition-all duration-1000 ease-in-out ${textInView ? "animate-fade-inward opacity-100" : "opacity-0"
+            }`}
         >
           <div className="font-extrabold text-[#7786e1] text-center">PORTFOLIO</div>
           <div className="font-extrabold text-[1.8vw] text-center">Latest Projects</div>
@@ -52,7 +51,7 @@ const ProjectsSection = () => {
             stack={""}
             pic={"/imgs/proj1.jpg"}
             description={
-              "An app that optimizes waste collection using real-time data, reducing costs, pollution, and ensuring timely pickups for efficient waste management."
+              "An app that optimizes waste collection, reducing costs, pollution, and ensuring efficient waste management."
             }
             link={"/project/RouteOptimizer"}
             animationDelay={0.2} // Stagger effect
@@ -62,7 +61,7 @@ const ProjectsSection = () => {
             stack={""}
             pic={"/imgs/proj2.png"}
             description={
-              "A tool to verify online content quickly, using a browser extension and interface to analyze and provide instant feedback on credibility."
+              "A tool to verify online content quickly, using a browser extension and interface to analyze and provide instant feedback."
             }
             link={""}
             animationDelay={0.6}
@@ -77,6 +76,18 @@ const ProjectsSection = () => {
             link={""}
             animationDelay={0.2}
           />
+
+          <ProjectCard
+            title={"Fake News Detector"}
+            stack={""}
+            pic={"/imgs/proj2.png"}
+            description={
+              "A tool to verify online content quickly, using a browser extension and interface to analyze and provide instant feedback."
+            }
+            link={""}
+            animationDelay={0.6}
+          />
+
         </div>
       </div>
 

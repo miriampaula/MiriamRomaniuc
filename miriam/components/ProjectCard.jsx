@@ -71,7 +71,7 @@ const ProjectCard = ({ title, stack, pic, description, link, animationDelay = 0 
     // Navigate to the destination page after the animation
     setTimeout(() => {
       router.push(link);
-    }, 300);
+    }, 500);
   };
   
   
@@ -80,7 +80,7 @@ const ProjectCard = ({ title, stack, pic, description, link, animationDelay = 0 
   return (
     <div
       ref={cardRef}
-      className={`group  project-card mx-auto p-8 grid w-[33vw] cursor-pointer hover:bg-white/40 bg-white shadow-md rounded-3xl relative transition-all duration-300 ease-in-out hover:shadow-lg hover:pt-14 ${inView ? "animate-fade-left" : "opacity-0"
+      className={`group project-card mx-auto p-8 grid w-[33vw] cursor-pointer hover:bg-white/40 bg-white shadow-md rounded-3xl relative transition-all duration-500 ease-in-out hover:shadow-lg hover:pt-14 ${inView ? "animate-fade-left" : "opacity-0"
         }`}
       onClick={handleNavigation}
       style={{ animationDelay: `${animationDelay}s` }} // Apply animation delay
