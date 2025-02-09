@@ -71,7 +71,7 @@ const ProjectsSection = () => {
         { name: "NextJS", icon: <RiNextjsLine /> },
 
       ],
-      pic: "/imgs/fakefewsdetector.jpg",
+      pic: "/imgs/fakenewsdetector.jpg",
       description:
         "A tool to verify online content quickly, featuring both a browser extension and a dashboard-type interface to analyze and provide instant feedback.",
       link: "/project/FakeNewsDetector",
