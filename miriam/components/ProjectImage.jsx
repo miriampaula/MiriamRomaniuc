@@ -20,10 +20,13 @@ const ProjectImage = ({ imgSrc }) => {
     }
   }, []);
 
+  // Ensure imgSrc is formatted correctly
+  const formattedSrc = imgSrc?.toLowerCase().replace(/\s+/g, "");
+
   return (
     <div className="absolute left-0 md:left-none max-w-[90vw] md:w-full md:top-20 right-0">
       <Image
-        src={imgSrc}
+        src={formattedSrc}
         className="rounded-3xl w-[90%]"
         alt="proj"
         width={300}

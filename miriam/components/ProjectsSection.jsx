@@ -44,7 +44,7 @@ const ProjectsSection = () => {
 
 
       ],
-      pic: "/imgs/FinancialTool.jpg",
+      pic: "/imgs/financialtool.jpg",
       description:
 "An application that automates a financial report analysis, reducing task completion time from five minutes to ten seconds while enhancing efficiency and accuracy.",
       link: "/project/FinancialTool",
@@ -57,7 +57,7 @@ const ProjectsSection = () => {
         { name: "React", icon: <FaReact /> },
         { name: "AzureAPI", icon: <TbBrandAzure /> },
       ],
-      pic: "/imgs/RouteOptimizer.jpg",
+      pic: "/imgs/routeoptimizer.jpg",
       description:
         "An app that optimizes waste collection, reducing costs, pollution, and ensuring efficient waste management.",
       link: "/project/RouteOptimizer",
@@ -71,7 +71,7 @@ const ProjectsSection = () => {
         { name: "NextJS", icon: <RiNextjsLine /> },
 
       ],
-      pic: "/imgs/FakeNewsDetector.jpg",
+      pic: "/imgs/fakefewsdetector.jpg",
       description:
         "A tool to verify online content quickly, featuring both a browser extension and a dashboard-type interface to analyze and provide instant feedback.",
       link: "/project/FakeNewsDetector",
@@ -84,7 +84,7 @@ const ProjectsSection = () => {
         { name: "NextJS", icon: <RiNextjsLine /> },
         { name: "React", icon: <FaReact /> },
       ],
-      pic: "/imgs/ReadingAssistant.jpg",
+      pic: "/imgs/readingassistant.jpg",
       description:
         "An app that learns from your favorite books, like a fine-tuned LLM, answering questions about the plot, structure, or anything else you need.",
       link: "/project/ReadingAssistant",
