@@ -11,7 +11,7 @@ import { MdDesignServices, MdOutlineBrandingWatermark } from "react-icons/md";
 import { IoMdPaper } from "react-icons/io";
 import { BsBank } from "react-icons/bs";
 import { DiPython } from "react-icons/di"; // Added for Python-related tech
-import { SiFramework7 } from "react-icons/si";
+import { MdOutlineFilterFrames } from "react-icons/md";
 import { MdOutlinePictureAsPdf } from "react-icons/md";
 import { FaFileCode } from "react-icons/fa";
 import { IoCodeWorking } from "react-icons/io5";
@@ -43,7 +43,7 @@ const ProjectSections = ({ name }) => {
         "Azure API": TbBrandAzure,
         "Python AI Models": DiPython,
         "Python": DiPython,
-        "Tkinter Framework": SiFramework7, // Fallback icon for Tkinter Framework
+        "Tkinter Framework": MdOutlineFilterFrames, // Fallback icon for Tkinter Framework
         "PDFPlumber": MdOutlinePictureAsPdf,
     };
 
