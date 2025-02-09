@@ -70,7 +70,7 @@ body {
   --gradient-color-4: #d3f4ce;
   --gradient-color-2: #71b8eb;
   --gradient-color-3: #6a60ff;
-  --gradient-color-1: #7cc1ed;
+  --gradient-color-1: #7c98ed;
 
 }
 
@@ -225,6 +225,7 @@ body {
     opacity: 0;
     transform: translateX(50px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -260,6 +261,7 @@ body {
     opacity: 0;
     transform: translateY(-50px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -272,6 +274,7 @@ body {
     transform: translateX(-50px);
 
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -324,10 +327,10 @@ body {
   pointer-events: none;
   z-index: 1;
   background: linear-gradient(to right,
-      #fafbff 0%,
+      #fafcff 0%,
       rgba(250, 251, 255, 0) 10%,
       rgba(250, 251, 255, 0) 90%,
-      #fafbff 100%);
+      #fafcff 100%);
 }
 
 
@@ -336,6 +339,7 @@ body {
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -346,23 +350,27 @@ body {
 }
 
 .parent-container {
-  opacity: 1; /* Ensure visible by default */
+  opacity: 1;
+  /* Ensure visible by default */
   transition: opacity 0.3s ease-in-out;
 }
 
 
 @keyframes clickEffect {
   0% {
-      transform: scale(1);
-      opacity: 1;
+    transform: scale(1);
+    opacity: 1;
   }
+
   50% {
-      transform: scale(1.1); /* Slightly larger */
-      opacity: 0.9;
+    transform: scale(1.1);
+    /* Slightly larger */
+    opacity: 0.9;
   }
+
   100% {
-      transform: scale(1);
-      opacity: 1;
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -382,54 +390,73 @@ body {
 
 @keyframes shrink-grow {
   0% {
-    transform: scale(1); /* Original size */
+    transform: scale(1);
+    /* Original size */
   }
+
   50% {
-    transform: scale(0.9); /* Slightly shrunk */
+    transform: scale(0.9);
+    /* Slightly shrunk */
   }
+
   100% {
-    transform: scale(1); /* Slightly shrunk */
+    transform: scale(1);
+    /* Slightly shrunk */
   }
 }
 
 .animate-shrink-grow {
-  animation: shrink-grow 1s ease-in-out infinite; /* 0.33s per cycle, 3 cycles per second */
+  animation: shrink-grow 1s ease-in-out infinite;
+  /* 0.33s per cycle, 3 cycles per second */
 }
 
 
-@keyframes circular-motion {
-  0% {
-    transform: translate(0, 0) rotate(0deg); /* Start at original position */
-  }
-  25% {
-    transform: translate(200px, 0) rotate(180deg); /* Rotate halfway with a spin */
-  }
-  50% {
-    transform: translate(200px, 200px) rotate(360deg); /* Complete one circle */
-  }
-  75% {
-    transform: translate(0, 200px) rotate(540deg); /* Move to the bottom of the circle, spinning more */
-  }
-  100% {
-    transform: translate(0, 0) rotate(720deg); /* Finish the circle and complete the second spin */
-  }
+
+/* Define the continuous motion path with one loop */
+.animate-advanced-flight {
+  /* Adjust the auto rotation to compensate for the plane's inherent orientation */
+  offset-rotate: auto 45deg;
+
+  /* Define a continuous path with one loop */
+  offset-path: path("M 0,0 L 300,-150 a 100,100 0 1,1 0,200 a 100,100 0 1,1 0,-200 L 600,-300 a 100,100 0 1,0 0,-200 a 100,100 0 1,0 0,200 L 900,-450");
+
+
+
+
+
+
+  /* Start the animation (4s duration; adjust as needed) */
+  animation: advancedFlight 4s ease-in-out forwards;
 }
 
-@keyframes fly-away {
+@keyframes advancedFlight {
   0% {
-    transform: translate(0, 0) scale(1); /* Start at the original position */
+    offset-distance: 0%;
     opacity: 1;
   }
-  50% {
-    animation: circular-motion 2s ease-in-out forwards; /* The plane moves along the circular arc and spins */
-  }
+
   100% {
-    transform: translate(20vw, -20vh) scale(1.5); /* Continue to the final destination */
-    opacity: 0; /* Fade out */
+    offset-distance: 100%;
+    opacity: 0;
+    /* Optional fade-out */
   }
 }
 
-.animate-fly-away {
-  animation: fly-away 4s ease-in-out forwards; /* Complete fly-away animation */
-}
 
+@layer utilities {
+  @media (min-width: 1000px) and (max-width: 1100px) and (min-height: 1200px) {
+    .tablet-special-height {
+      height: 60vh !important;
+      /* Adjust as needed */
+    }
+
+    .tablet-special-small-margin-top {
+      margin-top: 5vh;
+    }
+
+    .tablet-special-small-height {
+      height: 30vh !important;
+    }
+
+  }
+}

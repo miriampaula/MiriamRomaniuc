@@ -12,7 +12,7 @@ export default function Home() {
     const email = "miriamromaniuc@gmail.com"; // Recipient email address
     const subject = "Let's Talk"; // Email subject
     const body = "Hi there,\n\nI would like to discuss a project with you!"; // Email body
-    
+
     // Construct the mailto URL
     const mailto = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <div className="relative mt-[3vw] parent-container">
-      <div className="absolute animate-fade-down top-5 right-20">
+      <div className="block absolute animate-fade-down top-[8vw] right-[10vw] md:top-5 md:right-20">
         <BigButton message="Let's Talk" icon={BiMessageRounded} onClick={sendMessage} />
       </div>
       <MainSection />

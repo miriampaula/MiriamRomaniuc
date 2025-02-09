@@ -28,7 +28,7 @@ const GradientCircle2 = React.memo(() => {
       id="gradient2-canvas"
       ref={canvasRef}
       data-transition-in
-      className="absolute inset-0 w-full h-full"
+      className="absolute border border-black inset-0 w-full h-full"
     />
   );
 });

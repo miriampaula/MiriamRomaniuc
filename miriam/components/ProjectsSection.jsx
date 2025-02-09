@@ -2,6 +2,12 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import ProjectCard from "@/components/ProjectCard";
+import { RiNextjsLine } from "react-icons/ri";
+import { FaReact } from "react-icons/fa";
+import { TbBrandAzure } from "react-icons/tb";
+import { AiOutlinePython } from "react-icons/ai";
+import { FaMedapps } from "react-icons/fa";
+import { MdOutlinePictureAsPdf } from "react-icons/md";
 
 const ProjectsSection = () => {
   const [textInView, setTextInView] = useState(false);
@@ -14,7 +20,7 @@ const ProjectsSection = () => {
           setTextInView(true);
         }
       },
-      { threshold: 0.5 } // Trigger when 50% of the text is visible
+      { threshold: 0.5 }
     );
 
     if (textRef.current) {
@@ -28,70 +34,90 @@ const ProjectsSection = () => {
     };
   }, []);
 
+  const projects = [
+    {
+      title: "Financial Tool",
+      stack: [
+        { name: "Python", icon: <AiOutlinePython /> },
+        { name: "Tkinter", icon: <FaMedapps /> },
+        { name: "PdfPlumber", icon: <MdOutlinePictureAsPdf /> },
+
+
+      ],
+      pic: "/imgs/financialtool.jpg",
+      description:
+"An application that automates a financial report analysis, reducing task completion time from five minutes to ten seconds while enhancing efficiency and accuracy.",
+      link: "/project/FinancialTool",
+      animationDelay: 0.2,
+    },
+    {
+      title: "Route Optimizer",
+      stack: [
+        { name: "NextJS", icon: <RiNextjsLine /> },
+        { name: "React", icon: <FaReact /> },
+        { name: "AzureAPI", icon: <TbBrandAzure /> },
+      ],
+      pic: "/imgs/routeoptimizer.jpg",
+      description:
+        "An app that optimizes waste collection, reducing costs, pollution, and ensuring efficient waste management.",
+      link: "/project/RouteOptimizer",
+      animationDelay: 0.2,
+    },
+    {
+      title: "Fake News Detector",
+      stack: [
+        { name: "Python", icon: <AiOutlinePython /> },
+        { name: "React", icon: <FaReact /> },
+        { name: "NextJS", icon: <RiNextjsLine /> },
+
+      ],
+      pic: "/imgs/fakenewsdetector.jpg",
+      description:
+        "A tool to verify online content quickly, featuring both a browser extension and a dashboard-type interface to analyze and provide instant feedback.",
+      link: "/project/FakeNewsDetector",
+      animationDelay: 0.6,
+    },
+    {
+      title: "Reading Assistant",
+      stack: [
+        { name: "Python", icon: <AiOutlinePython /> },
+        { name: "NextJS", icon: <RiNextjsLine /> },
+        { name: "React", icon: <FaReact /> },
+      ],
+      pic: "/imgs/readingassistant.jpg",
+      description:
+        "An app that learns from your favorite books, like a fine-tuned LLM, answering questions about the plot, structure, or anything else you need.",
+      link: "/project/ReadingAssistant",
+      animationDelay: 0.2,
+    },
+  ];
+
   return (
-    <div className="">
-      <div className="h-[7vw]  rounded-t-3xl bg-gradient-to-b from-transparent to-[#e2e7fd]/30"></div>
+    <div id="portfolio-section">
+
+      <div className="md:h-[7vw] h-[15vw] mt-[15vh] md:mt-0 rounded-t-3xl bg-gradient-to-b from-transparent to-[#e2e7fd]/30"></div>
+
       <div className="py-[3vw] bg-[#e2e7fd]/30">
-        {/* Text Above the ProjectCards */}
         <div
           ref={textRef}
           className={`grid other-elements gap-4 text-center transition-all duration-1000 ease-in-out ${textInView ? "animate-fade-inward opacity-100" : "opacity-0"
             }`}
         >
-          <div className="font-extrabold text-[#7786e1] text-center">PORTFOLIO</div>
-          <div className="font-extrabold text-[1.8vw] text-center">Latest Projects</div>
-          <div className="font-bold text-[1vw] w-5/12 mx-auto">
-            Get a glimpse into some of my recent projects, showcasing a range of challenges and the solutions developed to address them.
+          <div className="font-extrabold text-[6vw] md:text-[3vw] lg:text-base text-[#7786e1]">PORTFOLIO</div>
+          <div className="font-extrabold text-[4vw] md:text-[2vw] lg:text-[1.8vw]">Latest Projects</div>
+          <div className="font-bold text-[3vw] md:text-[1.5vw] lg:text-[1vw] w-[80vw] md:w-5/12 mx-auto">
+            Get a glimpse into some of my recent projects, showcasing a range of challenges and solutions.
           </div>
         </div>
 
-        <div className="mt-12  project-cards grid grid-cols-2 gap-10 justify-center w-9/12 mx-auto items-start">
-          <ProjectCard
-            title={"Route Optimizer"}
-            stack={""}
-            pic={"/imgs/proj1.jpg"}
-            description={
-              "An app that optimizes waste collection, reducing costs, pollution, and ensuring efficient waste management."
-            }
-            link={"/project/RouteOptimizer"}
-            animationDelay={0.2} // Stagger effect
-          />
-          <ProjectCard
-            title={"Fake News Detector"}
-            stack={""}
-            pic={"/imgs/proj2.png"}
-            description={
-              "A tool to verify online content quickly, using a browser extension and interface to analyze and provide instant feedback."
-            }
-            link={""}
-            animationDelay={0.6}
-          />
-          <ProjectCard
-            title={"Reading Assistant"}
-            stack={""}
-            pic={"/imgs/proj3.png"}
-            description={
-              "An app that learns from your favorite books, answering questions about the plot, structure, or anything else you need."
-            }
-            link={""}
-            animationDelay={0.2}
-          />
-
-          <ProjectCard
-            title={"Fake News Detector"}
-            stack={""}
-            pic={"/imgs/proj2.png"}
-            description={
-              "A tool to verify online content quickly, using a browser extension and interface to analyze and provide instant feedback."
-            }
-            link={""}
-            animationDelay={0.6}
-          />
-
+        <div className="mt-12 grid md:grid-cols-2 gap-10 justify-center md:w-[85vw] lg:w-9/12 mx-auto">
+          {projects.map((proj, index) => (
+            <ProjectCard key={index} {...proj} />
+          ))}
         </div>
       </div>
+      <div className=" h-[15vw] md:h-[7vw] bg-gradient-to-t rounded-b-3xl from-transparent to-[#e2e7fd]/30"></div>
 
-      <div className="h-[7vw] bg-gradient-to-t rounded-b-3xl from-transparent to-[#e2e7fd]/30"></div>
     </div>
   );
 };

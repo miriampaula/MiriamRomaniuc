@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        'tablet-special': { 'raw': '(min-width: 1000px) and (max-width: 1100px) and (min-height: 1200px)' }
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

@@ -16,8 +16,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased bg-[#fafbff]">
-        <main className="min-h-screen bg-[#fafbff] relative z-0">
+      <body className="antialiased bg-[#fafcff]">
+        <main className="min-h-screen bg-[#fafcff] relative z-0">
           {children}
         </main>
       </body>

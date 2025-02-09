@@ -21,9 +21,9 @@ const ProjectImage = ({ imgSrc }) => {
   }, []);
 
   return (
-    <div className="absolute w-full top-24 right-0">
+    <div className="absolute left-0 md:left-none max-w-[90vw] md:w-full md:top-20 right-0">
       <Image
-        src={imgSrc || "/imgs/proj1.jpg"}
+        src={imgSrc}
         className="rounded-3xl w-[90%]"
         alt="proj"
         width={300}
