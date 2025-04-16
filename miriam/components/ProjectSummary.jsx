@@ -25,7 +25,7 @@ const ProjectSummary = ({ name, summary }) => {
                 </div>
             </div>
 
-            <div className="grid mt-[5vh] md:mt-[3vw] gap-[4vw]">
+            <div className="grid mt-[5vh] md:mt-[2vw] gap-[4vw]">
                 <div
                     className={`transition-transform duration-700 
                     ${visible ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"} 

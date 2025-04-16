@@ -189,7 +189,7 @@ const ProjectSections = ({ name }) => {
     };
 
     return (
-        <div id="scroll-target" ref={sectionRef} className="w-full relative z-50 md:h-[60vh] lg:h-auto lg:mb-[4vw] mt-[40vh] pt-10 md:mt-0 lg:mt-[5vh]">
+        <div id="scroll-target" ref={sectionRef} className="w-full relative z-50 md:h-[60vh] lg:h-auto lg:mb-[4vw] mt-[40vh] pt-10 md:mt-0 lg:mt-[10vw]">
             <div className="absolute w-[80vw] border border-black h-[90vh] blur-3xl opacity-40 rounded-full md:top-1/3 left-[-10vw] pointer-events-none overflow-hidden">
                 <GradientCircle3 />
             </div>
@@ -242,7 +242,7 @@ const ProjectSections = ({ name }) => {
                 </div>
 
                 {/* Right Side - What Section */}
-                <div className={`md:w-4/12 shadow-md md:shadow-0 p-10 bg-white z-30 rounded-3xl transition-transform duration-700 ease-in-out ${inView ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`}>
+                <div className={`md:w-4/12 shadow-md md:shadow-0 p-10 bg-white z-30 pb-20 rounded-3xl transition-transform duration-700 ease-in-out ${inView ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`}>
                     <div className="text-[6vw] md:text-[2vw] font-extrabold text-black">What</div>
                     <div className="grid my-[2vw] h-full justify-evenly text-center pb-10">
                         {currentProject.whatSection.map((feature, index) => (

@@ -53,8 +53,8 @@ const Contact_And_Footer = () => {
             setStatus("An error occurred. Please try again later.");
             setAnimationStage("idle");
         }
-            
-          
+
+
 
 
         setTimeout(() => {
@@ -154,21 +154,21 @@ const Contact_And_Footer = () => {
 
 
 
-            <div className="saturate-200 h-[40vw] md:h-[15vw]  sm:saturate-100  -z-10">
-                <div className="absolute w-[50vw] bottom-0 h-[20vw] md:h-[11vw] blur-3xl left-[-2vw] rotate-180 rounded-full z-5 pointer-events-none overflow-visible">
+            <div className="saturate-200 h-[40vw] md:h-[10vw]  sm:saturate-100  -z-10">
+                <div className="absolute w-[50vw] bottom-0 h-[20vw] md:h-[8vw] blur-3xl left-[-2vw] rotate-180 rounded-full z-5 pointer-events-none overflow-visible">
                     <GradientCircle2 />
                 </div>
-                <div className="absolute bg-[#7786e1] bottom-0 w-[50vw] h-[20vw] md:h-[9vw] blur-3xl left-[30vw] rounded-full  z-5 pointer-events-none overflow-hidden">
+                <div className="absolute bg-[#7786e1] bottom-0 w-[50vw] h-[20vw] md:h-[7vw] blur-3xl left-[30vw] rounded-full  z-5 pointer-events-none overflow-hidden">
                     .
                 </div>
-                <div className="absolute w-[50vw] bottom-0 h-[20vw] md:h-[11vw] blur-3xl  right-[-10vw] rounded-full  z-5 pointer-events-none overflow-hidden">
+                <div className="absolute w-[50vw] bottom-0 h-[20vw] md:h-[9vw] blur-3xl  right-[-10vw] rounded-full  z-5 pointer-events-none overflow-hidden">
                     <GradientCircle3 /></div>
             </div>
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-full text-center px-4 z-30 font-extrabold text-white text-[3vw] md:text-[15px] lg:text-[1vw]">
-    <span className="text-white [text-shadow:_2px_2px_4px_rgba(0,0,0,0.5)]">
-        Developed and designed with love ✨ <span className="fun3">Miriam Romaniuc</span>
-    </span>
-</div>
+                <span className="text-white [text-shadow:_2px_2px_4px_rgba(0,0,0,0.5)]">
+                    Developed and designed with love ✨ <span className="fun3">Miriam Romaniuc</span>
+                </span>
+            </div>
 
 
 

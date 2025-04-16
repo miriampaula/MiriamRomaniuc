@@ -94,7 +94,7 @@ const ProjectPage = () => {
         <div className="overflow-hidden p-[3vw] w-full h-full relative">
 
             {/* Go Back Button */}
-            <div className="absolute top-[8vw] right-[10vw] md:right-auto md:top-[8vw] md:left-[7vw] z-50">
+            <div className="absolute top-[8vw] right-[10vw] md:right-auto md:top-[5vw] md:left-[7vw] z-50">
                 <BigButton
                     message="Go Back"
                     icon={IoArrowBackOutline}
